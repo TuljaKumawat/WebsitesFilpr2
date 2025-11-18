@@ -5,7 +5,7 @@ const Clients = () => {
 
   useEffect(() => {
    // fetch("http://localhost:5000/clients")
-    fetch(`${process.env.REACT_APP_API_URL}/clients`)
+    fetch(`${process.env.REACT_APP_API_URL}/clients/all`)
       .then(res => res.json())
       .then(data => setClients(data))
       .catch(err => console.error("Fetch clients error:", err));
