@@ -1,12 +1,11 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const projectController = require('../Controllers/projectcontroller');
-const upload = require('../middleware/upload'); // multer instance
+const controller = require("../controller/projectcontroller");
+const upload = require("../middleware/multer"); // your multer middleware
 
-// upload.single("image") expects form key 'image'
-router.post('/add', upload.single("image"), projectController.addProject);
-router.get('/all', projectController.getProjects);
-router.get('/:id', projectController.getProjectById);
-router.delete('/:id', projectController.deleteProject);
+router.post("/add", upload.single("image"), controller.addProject);
+router.get("/", controller.getProjects);  // <-- IMPORTANT
+router.get("/:id", controller.getProjectById);
+router.delete("/:id", controller.deleteProject);
 
 module.exports = router;
