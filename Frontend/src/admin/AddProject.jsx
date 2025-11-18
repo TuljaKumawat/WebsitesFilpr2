@@ -19,7 +19,7 @@ const AddProject = () => {
     formData.append("name", name);
     formData.append("description", description);
 
-    fetch("http://localhost:5000/projects/add", {
+    fetch( `${process.env.REACT_APP_API_URL}/projects/add`, {
       method: "POST",
       body: formData
     })
