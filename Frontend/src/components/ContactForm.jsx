@@ -6,7 +6,8 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch("http://localhost:5000/contact/add", {
+  
+    fetch(`${process.env.REACT_APP_API_URL}/contact/add`, {
       method: "POST",
       headers: {"Content-Type":"application/json"},
       body: JSON.stringify(form)
