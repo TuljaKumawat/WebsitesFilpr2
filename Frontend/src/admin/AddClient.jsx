@@ -21,7 +21,8 @@ const AddClient = () => {
     formData.append("description", description);
     formData.append("designation", designation);
 
-    fetch("http://localhost:5000/clients/add", {
+    
+    fetch(`${process.env.REACT_APP_API_URL}/clients/add`, {
       method: "POST",
       body: formData
     })
