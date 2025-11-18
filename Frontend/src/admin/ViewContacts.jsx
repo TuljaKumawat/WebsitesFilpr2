@@ -5,7 +5,7 @@ const ViewContacts = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/contact/all")
+    fetch( `${process.env.REACT_APP_API_URL}/contact/all`)
       .then(res => res.json())
       .then(setData);
   }, []);
