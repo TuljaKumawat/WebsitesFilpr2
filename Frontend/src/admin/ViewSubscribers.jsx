@@ -5,7 +5,7 @@ const ViewSubscribers = () => {
   const [subs, setSubs] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/newsletter/all")
+    fetch(`${process.env.REACT_APP_API_URL}/newsletter/all`)
       .then(res => res.json())
       .then(setSubs);
   }, []);
