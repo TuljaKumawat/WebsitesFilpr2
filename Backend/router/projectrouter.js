@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const controller = require('../Controllers/projectcontroller'); // ✔ correct folder
-const upload = require("../middleware/multer"); // your multer middleware
+const upload = require("../middleware/upload"); // your multer middleware
 
 router.post("/add", upload.single("image"), controller.addProject);
 router.get("/", controller.getProjects);  // <-- IMPORTANT
