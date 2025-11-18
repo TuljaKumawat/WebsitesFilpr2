@@ -4,7 +4,15 @@ const cors = require('cors');
 require('dotenv').config();
 require('./dbconfiguration/dbconfig');
 
-app.use(cors());                // simpler & OK for dev
+
+app.use(cors({
+  origin: [
+    "http://localhost:3000",
+    "https://frontendflipr3.onrender.com"
+  ],
+  credentials: true
+}));
+
 app.use(express.json());        // parse JSON bodies
 
 // serve uploaded images publicly
