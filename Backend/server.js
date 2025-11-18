@@ -7,8 +7,7 @@ require('./dbconfiguration/dbconfig');
 
 app.use(cors({
   origin: [
-    "http://localhost:3000",
-    "https://frontendflipr3.onrender.com"
+    "https://websitesfilpf.onrender.com/"
   ],
   credentials: true
 }));
