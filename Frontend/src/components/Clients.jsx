@@ -4,7 +4,7 @@ const Clients = () => {
   const [clients, setClients] = useState([]);
 
   useEffect(() => {
-   // fetch("http://localhost:5000/clients/all")
+   // fetch("http://localhost:5000/clients")
     fetch(`${process.env.REACT_APP_API_URL}/clients`)
       .then(res => res.json())
       .then(data => setClients(data))
