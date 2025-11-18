@@ -6,9 +6,8 @@ require('./dbconfiguration/dbconfig');
 
 
 app.use(cors({
-  origin: [
-    "https://websitesfilpf.onrender.com/"
-  ],
+  origin: "https://websitesfilpf.onrender.com",
+  methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
 
