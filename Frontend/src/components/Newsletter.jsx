@@ -6,7 +6,7 @@ const Newsletter = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch("http://localhost:5000/newsletter/add", {
+    fetch(`${process.env.REACT_APP_API_URL}/newsletter/add`, {
       method: "POST",
       headers: {"Content-Type":"application/json"},
       body: JSON.stringify({ email })
